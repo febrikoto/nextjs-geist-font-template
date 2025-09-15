@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <title>Presensi Guru & Pegawai • Buku Tamu</title>
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="icon" href="/icons/icon-192.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#1363DF">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="app-title">
+            <span class="brand">Sekolah</span>
+            <span class="divider">•</span>
+            <span>Presensi & Buku Tamu</span>
+        </div>
+        <div class="header-actions">
+            <button id="installBtn" class="btn ghost" hidden>Pasang Aplikasi</button>
+            <label class="theme-toggle" title="Mode Gelap/Terang">
+                <input id="themeToggle" type="checkbox" aria-label="Toggle tema" />
+                <span class="toggle-track"><span class="toggle-thumb"></span></span>
+            </label>
+        </div>
+    </header>
+
+    <nav class="tabs" role="tablist">
+        <button class="tab active" role="tab" aria-selected="true" data-target="#view-presensi">Presensi</button>
+        <button class="tab" role="tab" aria-selected="false" data-target="#view-bukutamu">Buku Tamu</button>
+    </nav>
+
+    <main class="views">
+        <section id="view-presensi" class="view active" role="tabpanel" aria-labelledby="tab-presensi"></section>
+        <section id="view-bukutamu" class="view" role="tabpanel" aria-labelledby="tab-bukutamu"></section>
+    </main>
+
+    <footer class="app-footer">
+        <span>Offline-ready PWA • Ekspor CSV • Tanda tangan digital</span>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js" integrity="sha256-L1k6eJ8uF3e/6g3dH1v9Yt3QH5I2mdeN2V7iG6mGx5E=" crossorigin="anonymous"></script>
+    <script type="module" src="/app.js"></script>
+</body>
+</html>
+
