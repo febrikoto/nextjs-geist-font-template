@@ -39,7 +39,7 @@ export default function HomePage() {
         nama: row["Nama Siswa"] || "",
         ruang: row["Ruang"] || "",
         kelas: row["Kelas"] || "",
-        keterangan: row["Keterangan"] || "",
+        keterangan: row["Presensi"] || row["Keterangan"] || "",
       }));
 
       setParticipants(parsedParticipants);
@@ -107,7 +107,7 @@ export default function HomePage() {
                     <th className="border border-black px-2 py-1">Nama Siswa</th>
                     <th className="border border-black px-2 py-1">Ruang</th>
                     <th className="border border-black px-2 py-1">Kelas</th>
-                    <th className="border border-black px-2 py-1">Keterangan</th>
+                    <th className="border border-black px-2 py-1">Presensi</th>
                   </tr>
                 </thead>
                 <tbody>
